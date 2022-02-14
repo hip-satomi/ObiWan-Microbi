@@ -78,7 +78,7 @@ services:
 
   seg-serve:
     build:
-      context: "./serve-segmentation"
+      context: "./seg-serve"
     command: uvicorn --host 0.0.0.0 --root-path /segService main:app
     restart: always
     networks:
