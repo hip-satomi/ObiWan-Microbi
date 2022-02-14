@@ -1,0 +1,95 @@
+
+version: "3"
+
+services:
+
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+        - "80:80"
+    networks:
+      - omero
+    depends_on:
+      - omero
+      - omeroweb
+      - app
+      #- segServe
+
+  database:
+    image: "postgres:11"
+    environment:
+      POSTGRES_USER: omero
+      POSTGRES_DB: omero
+      POSTGRES_PASSWORD: omero
+    networks:
+      - omero
+    volumes:
+      - "database:/var/lib/postgresql/data"
+
+  omero:
+    # This container uses the tag for the latest server release of OMERO 5
+    # To upgrade to the next major release, increment the major version number
+    image: "openmicroscopy/omero-server:5"
+    environment:
+      CONFIG_omero_db_host: database
+      CONFIG_omero_db_user: omero
+      CONFIG_omero_db_pass: omero
+      CONFIG_omero_db_name: omero
+      ROOTPASS: omero
+    networks:
+      - omero
+    ports:
+      - "4063:4063"
+      - "4064:4064"
+    volumes:
+      - "omero:/OMERO"
+
+  omeroweb:
+    # This container uses the tag for the latest web release of OMERO 5
+    # To upgrade to the next major release, increment the major version number
+    image: "openmicroscopy/omero-web-standalone:5"
+    environment:
+      OMEROHOST: omero
+    networks:
+      - omero
+    ports:
+      - "4080:4080"
+
+  app:
+    build:
+      context: "./segui"
+      dockerfile: "./docker/Dockerfile"
+    environment:
+      OMERO_URL: omeroweb:4080
+    networks:
+      - omero
+
+  uploader:
+    build:
+      context: "./omero-static-upload"
+    environment:
+      OMERO_URL: omero
+    networks:
+      - omero
+    depends_on:
+      - omero
+    #command: "/bin/bash -c \"sleep 30\" && python main.py"
+
+  seg-serve:
+    build:
+      context: "./serve-segmentation"
+    command: uvicorn --host 0.0.0.0 --root-path /segService main:app
+    restart: always
+    networks:
+      - omero
+    expose:
+      - 8000
+
+
+networks:
+  omero:
+
+volumes:
+  database:
+  omero:
