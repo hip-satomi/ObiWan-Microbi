@@ -3,7 +3,7 @@
 	url = git@jugit.fz-juelich.de:satomi/segtrackui.git
 [submodule "omero-static-upload"]
 	path = omero-static-upload
-	url = git@jugit.fz-juelich.de:j.seiffarth/omero-static-upload.git
+	url = git@jugit.fz-juelich.de:satomi/omero-static-upload.git
 [submodule "serve-segmentation"]
 	path = serve-segmentation
 	url = git@jugit.fz-juelich.de:j.seiffarth/serve-segmentation.git
