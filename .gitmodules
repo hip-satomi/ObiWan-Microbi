@@ -6,4 +6,4 @@
 	url = git@jugit.fz-juelich.de:satomi/omero-static-upload.git
 [submodule "serve-segmentation"]
 	path = serve-segmentation
-	url = git@jugit.fz-juelich.de:j.seiffarth/serve-segmentation.git
+	url = git@jugit.fz-juelich.de:j.satomi/seg-serve.git
