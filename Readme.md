@@ -9,7 +9,7 @@ An ubuntu linux system is recommended to install this microarchitecture service.
 Please download this repository including its submodules using
 
 ```bash
-git clone --recurse-submodules https://jugit.fz-juelich.de/satomi/obiwan-microbi.git
+git clone --recurse-submodules git@jugit.fz-juelich.de:satomi/obiwan-microbi.git
 cd obiwan-microbi
 ```
 
