@@ -4,6 +4,8 @@ Obi-Wan Microbi is a toolkit collection for semi-automated segmentation of (biol
 
 ## Installation
 
+An ubuntu linux system is recommended to install this microarchitecture service. Then you can access the services in your local network with any computer providing a web-browser.
+
 Please download this repository including its submodules using
 
 ```bash
@@ -13,24 +15,20 @@ cd obiwan-microbi
 
 For installing the ObiWan Microbi Toolkit make sure that [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) are installed on your computer.
 
-The Toolkit is be built using your bash shell
+The Toolkit is be built and launched using your bash shell
 
 ```bash
-docker-compose build
+sudo docker-compose up --build
 ```
 
-**Note**: This will take some time as all the necessary resources are downloaded, compiled and provided. This only has to be performed once!
+**Note**: Building will take a while for the first time as all the necessary resources are downloaded, compiled and provided. However, this only has to be performed once: All following launches will be fast.
 
-The toolkit can be started using
-```bash
-docker-compose up
-```
+After the toolkit startup, the following services are provided:
 
-Now the toolkit should start up providing:
-
-- SegUI interface at [http://localhost](http://localhost)
-- OmeroWeb interface at [http://localhost:4080](http://localhost:4080)
-- Omero server at the default ports (4064) so that it is accessible via [Omero Insight](https://www.openmicroscopy.org/omero/downloads/)
+- SegUI interface at [http://localhost](http://localhost).
+- SegServe interface at [http://localhost/segService/](http://localhost/segService/). If you want to interactively test the api and inspect the openapi definitions see [here](http://localhost/segService/docs).
+- OmeroWeb interface at [http://localhost:4080](http://localhost:4080).
+- Omero server at the default ports (4064) so that it is accessible via [Omero Insight](https://www.openmicroscopy.org/omero/downloads/).
 
 ### GPU version
 
