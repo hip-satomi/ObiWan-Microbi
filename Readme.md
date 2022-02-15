@@ -35,8 +35,7 @@ After the toolkit startup, the following services are provided:
 We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version and an nvidia driver installed. Now you can repeat the startup procedure with the GPU version
 
 ```bash
-docker-compose -f docker-compose.gpu.yml build
-docker-compose -f docker-compose.gpu.yml up
+sudo docker-compose -f docker-compose.gpu.yml up --build
 ```
 
 ## Getting Started
