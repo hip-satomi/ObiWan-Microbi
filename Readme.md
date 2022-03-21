@@ -4,7 +4,7 @@ Obi-Wan Microbi is a toolkit collection for semi-automated segmentation of (biol
 
 ## Installation
 
-An ubuntu linux system is recommended to install this microarchitecture service. Then you can access the services in your local network with any computer providing a web-browser.
+An ubuntu linux system is recommended to install the microarchitecture service. After installation you can access the services in your local network with any computer, notebook, tablet or smartphone.
 
 Please download this repository including its submodules using
 
@@ -15,13 +15,13 @@ cd obiwan-microbi
 
 For installing the ObiWan Microbi Toolkit make sure that [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) are installed on your computer.
 
-The Toolkit is be built and launched using your bash shell
+The Toolkit has to be built and launched using your bash shell
 
 ```bash
 sudo docker-compose up --build
 ```
 
-**Note**: Building will take a while for the first time as all the necessary resources are downloaded, compiled and provided. However, this only has to be performed once: All following launches will be fast.
+**Note**: Building will take a while for the first time (~1h) because all the necessary resources are downloaded, compiled and provided. However, this only has to be performed once: All following launches will be fast.
 
 After the toolkit startup, the following services are provided:
 
@@ -30,6 +30,8 @@ After the toolkit startup, the following services are provided:
 - OmeroWeb interface at [http://localhost:4080](http://localhost:4080).
 - Omero server at the default ports (4064) so that it is accessible via [Omero Insight](https://www.openmicroscopy.org/omero/downloads/).
 
+**Note:** Please make sure that the ports `80`, `4080` and `4064` are not used on your computer. Otherwise the launch of ObiWan-Microbi will fail.
+
 ### GPU version
 
 We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version and an nvidia driver installed. Now you can repeat the startup procedure with the GPU version
@@ -37,6 +39,8 @@ We also provided a GPU tailored version of the toolkit to utilize the faster seg
 ```bash
 sudo docker-compose -f docker-compose.gpu.yml up --build
 ```
+
+**Note:** GPU usage can dramatically speed up segmentation execution, especially for larger images. Therfore, GPU usage is recommended in production usage.
 
 ## Getting Started
 
