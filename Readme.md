@@ -1,4 +1,4 @@
-# Obi-Wan Microbi: Omero based integrated workflow for annotating Microbes
+# Obi-Wan Microbi: Omero based integrated Workflow for annotating Microbes in the Cloud
 
 Obi-Wan Microbi is a toolkit collection for semi-automated segmentation of (biological) image data in the cloud. It relies on the [Omero](https://www.openmicroscopy.org/omero/) image server to handling image storage and access handling. We contribute **SegUI** - a browser-based tool for semi-automated manual segmentation - and **SegServe** - a remote neural network execution server. All three components are combined into a docker-compose setup to be easily deployed on a local computer or in a cloud system.
 
