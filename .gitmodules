@@ -1,9 +1,9 @@
 [submodule "segui"]
 	path = segui
-	url = ./SegUI.git
+	url = ../SegUI.git
 [submodule "omero-static-upload"]
 	path = omero-static-upload
-	url = ./OmeroStaticUpload.git
+	url = ../OmeroStaticUpload.git
 [submodule "seg-serve"]
 	path = seg-serve
-	url = ./SegServe.git
+	url = ../SegServe.git
