@@ -10,7 +10,7 @@ Please download this repository including its submodules using
 
 ```bash
 git clone --recurse-submodules https://github.com/hip-satomi/ObiWan-Microbi.git
-cd obiwan-microbi
+cd ObiWan-Microbi
 ```
 
 For installing the ObiWan Microbi Toolkit make sure that [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) are installed on your computer.
