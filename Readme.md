@@ -50,6 +50,8 @@ After the toolkit is built and online, 5 simulated image stacks are automaticall
 
 You can open the SegUI browsing view [here](http://localhost). Video about to come.
 
+[![Rick Astley - Never Gonna Give You Up (Official Music Video)](https://youtube-md.vercel.app/dQw4w9WgXcQ/640/360)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 ### Annotating images
 
 Video about to come.
