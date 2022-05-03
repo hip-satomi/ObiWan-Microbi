@@ -48,7 +48,9 @@ After the toolkit is built and online, 5 simulated image stacks are automaticall
 
 ### Browsing Projects, Datasets & Images
 
-You can open the SegUI browsing view [here](http://localhost). Video about to come.
+You can open the SegUI browsing view [here](http://localhost).
+
+[![Navigation Tutorial](https://youtube-md.vercel.app/WYo7iMmBehg/640/360)](https://youtu.be/WYo7iMmBehg)
 
 ### Annotating images
 
