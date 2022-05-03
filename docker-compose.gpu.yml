@@ -10,10 +10,10 @@ services:
     networks:
       - omero
     depends_on:
-      - omeroserver
+      - omero
       - omeroweb
       - app
-      - segServe
+      - seg-serve
 
   database:
     image: "postgres:11"
@@ -26,7 +26,7 @@ services:
     volumes:
       - "database:/var/lib/postgresql/data"
 
-  omeroserver:
+  omero:
     # This container uses the tag for the latest server release of OMERO 5
     # To upgrade to the next major release, increment the major version number
     image: "openmicroscopy/omero-server:5"
@@ -49,7 +49,7 @@ services:
     # To upgrade to the next major release, increment the major version number
     image: "openmicroscopy/omero-web-standalone:5"
     environment:
-      OMEROHOST: omeroserver
+      OMEROHOST: omero
     networks:
       - omero
     ports:
@@ -57,7 +57,7 @@ services:
 
   app:
     build:
-      context: "../"
+      context: "./segui"
       dockerfile: "./docker/Dockerfile"
     environment:
       OMERO_URL: omeroweb:4080
