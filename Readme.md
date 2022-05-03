@@ -4,9 +4,15 @@
 
 Obi-Wan Microbi is a toolkit collection for semi-automated segmentation of (biological) image data in the cloud. It relies on the [Omero](https://www.openmicroscopy.org/omero/) image server to handling image storage and access handling. We contribute **SegUI** - a browser-based tool for semi-automated manual segmentation - and **SegServe** - a remote neural network execution server. All three components are combined into a docker-compose setup to be easily deployed on a local computer or in a cloud system.
 
+## Prerequisites
+
+- install [docker](https://docs.docker.com/get-docker/)
+- install [docker-compose](https://docs.docker.com/compose/install/)
+- for using accelerated deep-learning execution use a Nvidia GPU
+
 ## Installation
 
-An ubuntu linux system is recommended to install the microarchitecture service. After installation you can access the services in your local network with any computer, notebook, tablet or smartphone.
+An `ubuntu` linux system is recommended to install the microarchitecture service. After installation you can access the services in your local network with any computer, notebook, tablet or smartphone.
 
 Please download this repository including its submodules using
 
@@ -14,8 +20,6 @@ Please download this repository including its submodules using
 git clone --recurse-submodules https://github.com/hip-satomi/ObiWan-Microbi.git
 cd ObiWan-Microbi
 ```
-
-For installing the ObiWan Microbi Toolkit make sure that [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) are installed on your computer.
 
 The Toolkit has to be built and launched using your bash shell
 
@@ -27,22 +31,24 @@ sudo docker-compose up --build
 
 After the toolkit startup, the following services are provided:
 
-- SegUI interface at [http://localhost](http://localhost).
-- SegServe interface at [http://localhost/segService/](http://localhost/segService/). If you want to interactively test the api and inspect the openapi definitions see [here](http://localhost/segService/docs).
+- SegUI interface for annotation at [http://localhost](http://localhost).
+- SegServe interface for executing segmentation algorithms at [http://localhost/segService/](http://localhost/segService/). If you want to interactively test the api and inspect the openapi definitions see [here](http://localhost/segService/docs).
 - OmeroWeb interface at [http://localhost:4080](http://localhost:4080).
 - Omero server at the default ports (4064) so that it is accessible via [Omero Insight](https://www.openmicroscopy.org/omero/downloads/).
 
 **Note:** Please make sure that the ports `80`, `4080` and `4064` are not used on your computer. Otherwise the launch of ObiWan-Microbi will fail.
 
-### GPU version
+**Note:** It is possible to connect ObiWan-Microbi to an existing Omero server. If you would like to do so just contact us.
 
-We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version and an nvidia driver installed. Now you can repeat the startup procedure with the GPU version
+### Accelerated Segmentation - GPU version
+
+We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of Nvidia GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version and an nvidia driver installed. Now you can repeat the startup procedure with the GPU version
 
 ```bash
 sudo docker-compose -f docker-compose.gpu.yml up --build
 ```
 
-**Note:** GPU usage can dramatically speed up segmentation execution, especially for larger images. Therfore, GPU usage is recommended in production usage.
+**Note:** GPU usage can dramatically speed up segmentation execution, especially for larger images (~20). Therfore, GPU usage is recommended in production usage.
 
 ## Getting Started
 
