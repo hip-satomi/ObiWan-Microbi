@@ -54,19 +54,19 @@ You can open the SegUI browsing view [here](http://localhost).
 
 ### Annotating images
 
-Video about to come.
+[![Annotation Tutorial](https://youtube-md.vercel.app/1UMy6wnDnAU/640/360)](https://youtu.be/1UMy6wnDnAU)
 
 ### Semi-automated segmentation
 
-Video about to come.
+[![Semi-automated Tutorial](https://youtube-md.vercel.app/vx0hVg1Ua1U/640/360)](https://youtu.be/vx0hVg1Ua1U)
 
 ### Import & Export for Omero
 
-Video about to come.
+[![Export Tutorial](https://youtube-md.vercel.app/YF_H_Ctd6Cc/640/360)](https://youtu.be/YF_H_Ctd6Cc)
 
 ### Multi-label handling
 
-Video about to come.
+[![Multi-Label Tutorial](https://youtube-md.vercel.app/o8xVpZydfLs/640/360)](https://youtu.be/o8xVpZydfLs)
 
 ### Add your own segmentation approach
 
