@@ -1,18 +1,21 @@
-# ObiWan-Microbi: Omero based integrated Workflow for annotating Microbes in the Cloud
+# ObiWan-Microbi: OMERO-based integrated Workflow for annotating Microbes in the Cloud
 
 ![Preview](https://raw.githubusercontent.com/hip-satomi/ObiWan-Microbi/animation/preview.gif)
 
-Obi-Wan Microbi is a toolkit collection for semi-automated segmentation of (biological) image data in the cloud. It relies on the [Omero](https://www.openmicroscopy.org/omero/) image server to handling image storage and access handling. We contribute **SegUI** - a browser-based tool for semi-automated manual segmentation - and **SegServe** - a remote neural network execution server. All three components are combined into a docker-compose setup to be easily deployed on a local computer or in a cloud system.
+ObiWan-Microbi is a toolkit collection for semi-automated segmentation and annotation of (biological) image data in the cloud. It utilizes an [OMERO](https://www.openmicroscopy.org/omero/) image server for data magement. We contribute **SegUI** - a browser-based tool for semi-automated manual segmentation and annotation - and **SegServe** - a remote neural network execution server. All three components are combined into a docker-compose setup to be easily deployed on a local computer or in a cloud system.
 
 ## Prerequisites
 
 - install [docker](https://docs.docker.com/get-docker/)
 - install [docker-compose](https://docs.docker.com/compose/install/)
-- for using accelerated deep-learning execution use a Nvidia GPU and install [`nvidia-docker2`](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
+- **recommended**: CUDA capable GPU for accelerated deep-learning execution.
+- recommended: linux system for hosting (tested on ubuntu)
 
 ## Installation
 
-An `ubuntu` linux system is recommended to install the microarchitecture service. After installation you can access the services in your local network with any computer, notebook, tablet or smartphone.
+ObiWan-Microbi can be installed on your local system, network servers or cloud setups. For small instances and testing local installations or server computers are recommended. For large-scale setups, we recommend a cloud solution.
+
+The installation is performed once on your system. Afterwards, you can access the services in your local network with any computer, notebook, tablet or smartphone.
 
 Please download this repository including its submodules using
 
@@ -21,28 +24,28 @@ git clone --recurse-submodules https://github.com/hip-satomi/ObiWan-Microbi.git
 cd ObiWan-Microbi
 ```
 
-The Toolkit has to be built and launched using your bash shell
+The toolkit has to be built and launched using your bash shell
 
 ```bash
 sudo docker-compose up --build
 ```
 
-**Note**: Building will take a while for the first time (~1h) because all the necessary resources are downloaded, compiled and provided. However, this only has to be performed once: All following launches will be fast.
+**Note**: Building will take a while for the first time (~1h) because all the necessary resources are downloaded, compiled and provided. However, this only has to be performed once: all following launches will be fast.
 
 After the toolkit startup, the following services are provided:
 
 - SegUI interface for annotation at [http://localhost](http://localhost).
 - SegServe interface for executing segmentation algorithms at [http://localhost/segService/](http://localhost/segService/). If you want to interactively test the api and inspect the openapi definitions see [here](http://localhost/segService/docs).
 - OmeroWeb interface at [http://localhost:4080](http://localhost:4080).
-- Omero server at the default ports (4064) so that it is accessible via [Omero Insight](https://www.openmicroscopy.org/omero/downloads/).
+- OMERO server at the default ports (4064) accessible with the default configuration of [OMERO Insight](https://www.openmicroscopy.org/omero/downloads/).
 
-**Note:** Please make sure that the ports `80`, `4080` and `4064` are not used on your computer. Otherwise the launch of ObiWan-Microbi will fail.
+**Note:** Please make sure that the ports `80`, `4080` and `4064` are not used on your server. Otherwise the launch of ObiWan-Microbi will fail.
 
-**Note:** It is possible to connect ObiWan-Microbi to an existing Omero server. If you would like to do so just contact us.
+**Note:** It is possible to connect ObiWan-Microbi to an existing OMERO server. If you would like to do so just contact us.
 
 ### Accelerated Segmentation - GPU version
 
-We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of Nvidia GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version, an nvidia driver installed and please install [nvidia-docker2](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) to use your GPU in the docker container.
+We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of Nvidia GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version, an Nvidia driver installed and please install [nvidia-docker2](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) to use your GPU in the docker container.
 
 Now you can repeat the startup procedure with the GPU version
 
@@ -54,11 +57,11 @@ sudo docker-compose -f docker-compose.gpu.yml up --build
 
 ## Getting Started
 
-After the toolkit is built and online, 5 simulated image stacks are automatically added to the omero server to get you started.
+For testing purposes, 5 simulated microbial time-lapse sequences are available after building the toolkit.
 
 ### Browsing Projects, Datasets & Images
 
-You can open the SegUI browsing view at [http://localhost](http://localhost).
+You can open the SegUI browsing view at [http://localhost](http://localhost) and login with default admin credentials (username: `root`, password: `omero`).
 
 [![Navigation Tutorial](https://youtube-md.vercel.app/WYo7iMmBehg/640/360)](https://youtu.be/WYo7iMmBehg)
 
@@ -70,13 +73,17 @@ You can open the SegUI browsing view at [http://localhost](http://localhost).
 
 [![Semi-automated Tutorial](https://youtube-md.vercel.app/vx0hVg1Ua1U/640/360)](https://youtu.be/vx0hVg1Ua1U)
 
-### Import & Export for Omero
+### Import & Export for OMERO
 
 [![Export Tutorial](https://youtube-md.vercel.app/YF_H_Ctd6Cc/640/360)](https://youtu.be/YF_H_Ctd6Cc)
 
 ### Multi-label handling
 
 [![Multi-Label Tutorial](https://youtube-md.vercel.app/o8xVpZydfLs/640/360)](https://youtu.be/o8xVpZydfLs)
+
+### Training custom deep-learning segmentation
+
+If you want to train your own deep-learning segmentation to get high-quality results on your custom data, we highly recommend using [microbeSEG](https://github.com/hip-satomi/microbeSEG). It allows to manage large training datasets, supports cropping to minimize annotation work, connects to ObiWan-Microbi toolkit for annotation and data management and allows to train microbial segmentation models. Check it out :rocket:
 
 ### Add your own segmentation approach
 
@@ -100,8 +107,16 @@ A complete feature list of the ObiWan-Microbi software platform
   - **Manual correction tools**: Providing brush tool for drawing segmentations and a multi-select tool for selecting and deleting multiple segmentation contours.
   - **Multi-label handling**: Handles complex segmentation scenarios with multiple annotation labels and also supports AI approaches with multiple annotation classes.
   - **Automated Saving**: Do not loose any progress. We automatically save your work in the background.
-- **OMERO Integration**: User and data management using [Omero](https://www.openmicroscopy.org/omero/).
+- **OMERO Integration**: User and data management using [OMERO](https://www.openmicroscopy.org/omero/).
 - **Scalability**: The docker setup can be scaled from single-users to teams or a full cloud setup - depending on your demand.
 - **Simple docker installation**: Dockers containerization functionalities allow to easily deploy ObiWan Microbi.
 - **Remote accessibility**: You are no longer bound to one workstation. All your data is stored in OMERO and available in your browser after your login.
 - **Facilitate collaboration**: OMERO allows to share data in groups such that ground truth creation can be performed in a team of experts.
+
+## Publication:
+
+J.Seiffarth et al.: ObiWan-Microbi: OMERO-based integrated Workflow for annotation Microbes in the Cloud - in preparation
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
