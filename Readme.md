@@ -1,4 +1,4 @@
-# Obi-Wan Microbi: Omero based integrated Workflow for annotating Microbes in the Cloud
+# ObiWan-Microbi: Omero based integrated Workflow for annotating Microbes in the Cloud
 
 ![Preview](https://raw.githubusercontent.com/hip-satomi/ObiWan-Microbi/animation/preview.gif)
 
