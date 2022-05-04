@@ -8,7 +8,7 @@ Obi-Wan Microbi is a toolkit collection for semi-automated segmentation of (biol
 
 - install [docker](https://docs.docker.com/get-docker/)
 - install [docker-compose](https://docs.docker.com/compose/install/)
-- for using accelerated deep-learning execution use a Nvidia GPU
+- for using accelerated deep-learning execution use a Nvidia GPU and install [`nvidia-docker2`](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
 
 ## Installation
 
@@ -42,7 +42,9 @@ After the toolkit startup, the following services are provided:
 
 ### Accelerated Segmentation - GPU version
 
-We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of Nvidia GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version and an nvidia driver installed. Now you can repeat the startup procedure with the GPU version
+We also provided a GPU tailored version of the toolkit to utilize the faster segmentation performance of Nvidia GPU hardware. Make sure that you have a very recent [docker-compose](https://docs.docker.com/compose/install/) version, an nvidia driver installed and please install [nvidia-docker2](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) to use your GPU in the docker container.
+
+Now you can repeat the startup procedure with the GPU version
 
 ```bash
 sudo docker-compose -f docker-compose.gpu.yml up --build
