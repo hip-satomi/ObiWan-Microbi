@@ -13,7 +13,7 @@ ObiWan-Microbi is a toolkit collection for semi-automated segmentation and annot
 
 ## Installation
 
-ObiWan-Microbi can be installed on your local system, network servers or cloud setups. For small instances and testing local installations or server computers are recommended. For large-scale setups, we recommend a cloud solution.
+ObiWan-Microbi can be installed on your local system, network servers or cloud setups. For small instances and testing, desktop computers or server computers are recommended. For large-scale setups, we recommend a cloud solution.
 
 The installation is performed once on your system. Afterwards, you can access the services in your local network with any computer, notebook, tablet or smartphone.
 
