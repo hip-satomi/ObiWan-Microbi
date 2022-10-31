@@ -63,23 +63,24 @@ For testing purposes, 5 simulated microbial time-lapse sequences are available a
 
 You can open the SegUI browsing view at [http://localhost](http://localhost) and login with default admin credentials (username: `root`, password: `omero`).
 
-[![Navigation Tutorial](https://youtube-md.vercel.app/WYo7iMmBehg/640/360)](https://youtu.be/WYo7iMmBehg)
+[![Navigation Tutorial](https://yt-embed.herokuapp.com/embed?v=WYo7iMmBehg)](https://youtu.be/WYo7iMmBehg)
+
 
 ### Annotating images
 
-[![Annotation Tutorial](https://youtube-md.vercel.app/1UMy6wnDnAU/640/360)](https://youtu.be/1UMy6wnDnAU)
+[![Annotation Tutorial](https://yt-embed.herokuapp.com/embed?v=1UMy6wnDnAU)](https://youtu.be/1UMy6wnDnAU)
 
 ### Semi-automated segmentation
 
-[![Semi-automated Tutorial](https://youtube-md.vercel.app/vx0hVg1Ua1U/640/360)](https://youtu.be/vx0hVg1Ua1U)
+[![Semi-automated Tutorial](https://yt-embed.herokuapp.com/embed?v=vx0hVg1Ua1U)](https://youtu.be/vx0hVg1Ua1U)
 
 ### Import & Export for OMERO
 
-[![Export Tutorial](https://youtube-md.vercel.app/YF_H_Ctd6Cc/640/360)](https://youtu.be/YF_H_Ctd6Cc)
+[![Export Tutorial](https://yt-embed.herokuapp.com/embed?v=YF_H_Ctd6Cc)](https://youtu.be/YF_H_Ctd6Cc)
 
 ### Multi-label handling
 
-[![Multi-Label Tutorial](https://youtube-md.vercel.app/o8xVpZydfLs/640/360)](https://youtu.be/o8xVpZydfLs)
+[![Multi-Label Tutorial](https://yt-embed.herokuapp.com/embed?v=o8xVpZydfLs)](https://youtu.be/o8xVpZydfLs)
 
 ### Training custom deep-learning segmentation
 
