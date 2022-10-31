@@ -116,7 +116,7 @@ A complete feature list of the ObiWan-Microbi software platform
 
 ## Publication:
 
-J.Seiffarth et al.: ObiWan-Microbi: OMERO-based integrated Workflow for annotation Microbes in the Cloud - in preparation
+[J.Seiffarth et al.: ObiWan-Microbi: OMERO-based integrated Workflow for annotation microbes in the cloud](https://doi.org/10.1101/2022.08.01.502297)
 
 ## License
 
