@@ -64,6 +64,8 @@ services:
       OMERO_URL: omeroweb:4080
     networks:
       - omero
+    depends_on:
+      - omeroweb
 
   uploader:
     build:
