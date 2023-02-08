@@ -1,5 +1,5 @@
 [submodule "segui"]
-	path = segui
+	path = annui
 	url = ../SegUI.git
 [submodule "omero-static-upload"]
 	path = omero-static-upload
