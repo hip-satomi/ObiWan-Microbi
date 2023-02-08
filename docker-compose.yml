@@ -58,7 +58,7 @@ services:
 
   app:
     build:
-      context: "./segui"
+      context: "./annui"
       dockerfile: "./docker/Dockerfile"
     environment:
       OMERO_URL: omeroweb:4080
