@@ -63,24 +63,28 @@ For testing purposes, 5 simulated microbial time-lapse sequences are available a
 
 You can open the SegUI browsing view at [http://localhost](http://localhost) and login with default admin credentials (username: `root`, password: `omero`).
 
-[![Navigation Tutorial](https://yt-embed.herokuapp.com/embed?v=WYo7iMmBehg)](https://youtu.be/WYo7iMmBehg)
+[![Browsing data Tutorial](https://img.youtube.com/vi/WYo7iMmBehg/sd3.jpg)](https://youtu.be/WYo7iMmBehg)
 
 
 ### Annotating images
 
-[![Annotation Tutorial](https://yt-embed.herokuapp.com/embed?v=1UMy6wnDnAU)](https://youtu.be/1UMy6wnDnAU)
+[![Segmentation Annotation Tutorial](https://img.youtube.com/vi/1UMy6wnDnAU/sd3.jpg)](https://youtu.be/1UMy6wnDnAU)
 
 ### Semi-automated segmentation
 
-[![Semi-automated Tutorial](https://yt-embed.herokuapp.com/embed?v=vx0hVg1Ua1U)](https://youtu.be/vx0hVg1Ua1U)
+[![Semi-automated Segmentation Tutorial](https://img.youtube.com/vi/vx0hVg1Ua1U/sd3.jpg)](https://youtu.be/vx0hVg1Ua1U)
+
+### Tracking Annotation
+
+[![Tracking Annotation Tutorial](https://img.youtube.com/vi/ureYzDTspQs/sd3.jpg)](https://youtu.be/ureYzDTspQs)
 
 ### Import & Export for OMERO
 
-[![Export Tutorial](https://yt-embed.herokuapp.com/embed?v=YF_H_Ctd6Cc)](https://youtu.be/YF_H_Ctd6Cc)
+[![Import & Export for OMERO Tutorial](https://img.youtube.com/vi/YF_H_Ctd6Cc/sd3.jpg)](https://youtu.be/YF_H_Ctd6Cc)
 
 ### Multi-label handling
 
-[![Multi-Label Tutorial](https://yt-embed.herokuapp.com/embed?v=o8xVpZydfLs)](https://youtu.be/o8xVpZydfLs)
+[![Multi-Label Tutorial](https://img.youtube.com/vi/o8xVpZydfLs/sd3.jpg)](https://youtu.be/o8xVpZydfLs)
 
 ### Training custom deep-learning segmentation
 
