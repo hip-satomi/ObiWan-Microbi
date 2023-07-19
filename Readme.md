@@ -32,7 +32,7 @@ sudo docker-compose up --build
 
 **Note**: Building will take a while for the first time (~1h) because all the necessary resources are downloaded, compiled and provided. However, this only has to be performed once: all following launches will be fast.
 
-After the toolkit startup the defaults user (username: root`, password: `omero`) is created and the following services are available:
+After the toolkit startup the defaults user (username: `root`, password: `omero`) is created and the following services are available:
 
 - SegUI interface for annotation at [http://localhost](http://localhost).
 - SegServe interface for executing segmentation algorithms with the respective openapi documentation of the REST API [http://localhost/segService/](http://localhost/segService/docs).
