@@ -90,6 +90,30 @@ You can open the SegUI browsing view at [http://localhost](http://localhost) and
 
 If you want to train your own deep-learning segmentation to get high-quality results on your custom data, we highly recommend using [microbeSEG](https://github.com/hip-satomi/microbeSEG). It allows to manage large training datasets, supports cropping to minimize annotation work, connects to ObiWan-Microbi toolkit for annotation and data management and allows to train microbial segmentation models. Check it out :rocket:
 
+## Keyboard Shortcuts
+
+### General
+
+| Key    | Action |
+| -------- | ------- |
+| Left arrow | Previous image in the timelapse |
+| Right arrow | Next Image in the timelapse |
+
+### Brush Tool
+
+| Key    | Action |
+| -------- | ------- |
+| A/Enter  | Add new segmentation annotation    |
+| Del | Delete selected segmentation     |
+| O    | Show/Hide overlays
+
+### Tracking Tool
+
+| Key    | Action |
+| -------- | ------- |
+| D  | Hold the d key to select multiple children for a cell |
+| C | Activate/Deactivate edge cutting mode |
+
 ## Feature List
 
 A complete feature list of the ObiWan-Microbi software platform
