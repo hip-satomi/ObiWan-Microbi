@@ -86,6 +86,10 @@ You can open the SegUI browsing view at [http://localhost](http://localhost) and
 
 [![Multi-Label Tutorial](https://img.youtube.com/vi/o8xVpZydfLs/sd3.jpg)](https://youtu.be/o8xVpZydfLs)
 
+### Adding Custom Segmentation Models
+
+[![Adding Custom Segmentation Models](https://img.youtube.com/vi/WuYc5q68R3U/sd3.jpg)](https://youtu.be/WuYc5q68R3U)
+
 ### Training custom deep-learning segmentation
 
 If you want to train your own deep-learning segmentation to get high-quality results on your custom data, we highly recommend using [microbeSEG](https://github.com/hip-satomi/microbeSEG). It allows to manage large training datasets, supports cropping to minimize annotation work, connects to ObiWan-Microbi toolkit for annotation and data management and allows to train microbial segmentation models. Check it out :rocket:
