@@ -144,6 +144,10 @@ If you want to train your own deep-learning segmentation to get high-quality res
 | D  | Hold the d key to select multiple children for a cell |
 | C | Activate/Deactivate edge cutting mode |
 
+## Adding ObiWan-Microbi to an existing OMERO instance
+
+In order to run `ObiWan-Microbi` with an existing OMERO instance you can edit the OMERO web endpoint [here](https://github.com/hip-satomi/ObiWan-Microbi/blob/01a6a9d4fde482c6063bdf02cc4548da8329f03d/docker-compose.yml#L64) pointing to the correct web address. In that case, the omero containers can be remove from the `docker-compose` script. Furthermore, it is recommended to run `ObiWan-Microbi` on the same computer as OMERO to prevent problems with cross-site references.
+
 ## Feature List
 
 A complete feature list of the ObiWan-Microbi software platform
