@@ -11,7 +11,7 @@ ObiWan-Microbi is a toolkit collection for semi-automated segmentation and annot
 - **recommended**: CUDA capable GPU for accelerated deep-learning execution.
 - recommended: linux system for hosting (tested on ubuntu)
 
-## Installation
+## Installation (Linux)
 
 ObiWan-Microbi can be installed on your local system, network servers or cloud setups. For small instances and testing, desktop computers or server computers are recommended. For large-scale setups, we recommend a cloud solution.
 
@@ -54,6 +54,18 @@ sudo docker-compose -f docker-compose.gpu.yml up --build
 ```
 
 **Note:** GPU usage can dramatically speed up segmentation execution, especially for larger images (~20). Therfore, GPU usage is recommended in production usage. However, incompatibility problems between the computer NVIDIA driver and the NVIDIA driver used in the docker container can lead to problems. If you run into problems with your GPU please create an [issue](https://github.com/hip-satomi/ObiWan-Microbi/issues/new).
+
+## Installation for Windows (Linux is recommended)
+
+Installing ObiWan-Microbi on a Windows computer requires `admin` permissions and is possible using the [Windows subsystem for Linux 2 (WSL2)](https://learn.microsoft.com/de-de/windows/wsl/). Please follow the instructions [here](https://hackernoon.com/how-to-run-docker-linux-containers-natively-on-windows-ti1i3uxr) in order to get docker and Linux running on your Windows machine.
+
+After that launch the linux distribution in `WSL2` mode and proceed with the normal installation instructions.
+
+We used `Ubuntu 22.04.2 LTS` in the WSL mode during our tests.
+
+**Why is Linux recommended?**
+
+> `ObiWan-Microbi` on Linux is much better supported, especially when GPU acceleration is needed for faster segmentation prediction. Therefore, the Linux installation is recommended. For initial testing, the Windows setup can be used.
 
 ## Getting Started
 
