@@ -75,30 +75,44 @@ For testing purposes, 5 simulated microbial time-lapse sequences are available a
 
 You can open the SegUI browsing view at [http://localhost](http://localhost) and login with default admin credentials (username: `root`, password: `omero`).
 
+In this video tutorial, we show how to browse the data on your OMERO instance.
+
 [![Browsing data Tutorial](https://img.youtube.com/vi/WYo7iMmBehg/sd3.jpg)](https://youtu.be/WYo7iMmBehg)
 
 
 ### Annotating images
 
+In this video tutorial, we show the segmentation features for fast manual cell segmentation.
+
 [![Segmentation Annotation Tutorial](https://img.youtube.com/vi/1UMy6wnDnAU/sd3.jpg)](https://youtu.be/1UMy6wnDnAU)
 
 ### Semi-automated segmentation
+
+In this video tutorial, we demonstrate the remote execution of AI segmentation using the user interface.
 
 [![Semi-automated Segmentation Tutorial](https://img.youtube.com/vi/vx0hVg1Ua1U/sd3.jpg)](https://youtu.be/vx0hVg1Ua1U)
 
 ### Tracking Annotation
 
+In this video tutorial, we show the manual tracking functionality.
+
 [![Tracking Annotation Tutorial](https://img.youtube.com/vi/ureYzDTspQs/sd3.jpg)](https://youtu.be/ureYzDTspQs)
 
 ### Import & Export for OMERO
+
+In this vidoe tutorial, we show the import and export functionality into OMERO's native formats.
 
 [![Import & Export for OMERO Tutorial](https://img.youtube.com/vi/YF_H_Ctd6Cc/sd3.jpg)](https://youtu.be/YF_H_Ctd6Cc)
 
 ### Multi-label handling
 
+In this video tutorial, we demonstrate complex image annotation with multiple class labels.
+
 [![Multi-Label Tutorial](https://img.youtube.com/vi/o8xVpZydfLs/sd3.jpg)](https://youtu.be/o8xVpZydfLs)
 
 ### Adding Custom Segmentation Models
+
+In this video tutorial, we show how to add custom segmentation models and utilize them in the web interface.
 
 [![Adding Custom Segmentation Models](https://img.youtube.com/vi/WuYc5q68R3U/sd3.jpg)](https://youtu.be/WuYc5q68R3U)
 
