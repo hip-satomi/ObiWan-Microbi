@@ -32,16 +32,16 @@ sudo docker-compose up --build
 
 **Note**: Building will take a while for the first time (~1h) because all the necessary resources are downloaded, compiled and provided. However, this only has to be performed once: all following launches will be fast.
 
-After the toolkit startup, the following services are provided:
+After the toolkit startup the defaults user (username: `root`, password: `omero`) is created and the following services are available:
 
 - SegUI interface for annotation at [http://localhost](http://localhost).
-- SegServe interface for executing segmentation algorithms at [http://localhost/segService/](http://localhost/segService/). If you want to interactively test the api and inspect the openapi definitions see [here](http://localhost/segService/docs).
+- SegServe interface for executing segmentation algorithms with the respective openapi documentation of the REST API [http://localhost/segService/](http://localhost/segService/docs).
 - OmeroWeb interface at [http://localhost:4080](http://localhost:4080).
 - OMERO server at the default ports (4064) accessible with the default configuration of [OMERO Insight](https://www.openmicroscopy.org/omero/downloads/).
 
-**Note:** Please make sure that the ports `80`, `4080` and `4064` are not used on your server. Otherwise the launch of ObiWan-Microbi will fail.
+**Note:** Please make sure that the ports `80`, `4080` and `4064` are not used on your computer. Otherwise the launch of ObiWan-Microbi will fail.
 
-**Note:** It is possible to connect ObiWan-Microbi to an existing OMERO server. If you would like to do so just contact us.
+**Note:** It is possible to connect ObiWan-Microbi to an existing OMERO server. If you would like to do so, please contact us.
 
 ### Accelerated Segmentation - GPU version
 
@@ -53,7 +53,7 @@ Now you can repeat the startup procedure with the GPU version
 sudo docker-compose -f docker-compose.gpu.yml up --build
 ```
 
-**Note:** GPU usage can dramatically speed up segmentation execution, especially for larger images (~20). Therfore, GPU usage is recommended in production usage.
+**Note:** GPU usage can dramatically speed up segmentation execution, especially for larger images (~20). Therfore, GPU usage is recommended in production usage. However, incompatibility problems between the computer NVIDIA driver and the NVIDIA driver used in the docker container can lead to problems. If you run into problems with your GPU please create an [issue](https://github.com/hip-satomi/ObiWan-Microbi/issues/new).
 
 ## Getting Started
 
@@ -90,9 +90,29 @@ You can open the SegUI browsing view at [http://localhost](http://localhost) and
 
 If you want to train your own deep-learning segmentation to get high-quality results on your custom data, we highly recommend using [microbeSEG](https://github.com/hip-satomi/microbeSEG). It allows to manage large training datasets, supports cropping to minimize annotation work, connects to ObiWan-Microbi toolkit for annotation and data management and allows to train microbial segmentation models. Check it out :rocket:
 
-### Add your own segmentation approach
+## Keyboard Shortcuts
 
-Video about to come.
+### General
+
+| Key    | Action |
+| -------- | ------- |
+| Left arrow | Previous image in the timelapse |
+| Right arrow | Next Image in the timelapse |
+
+### Brush Tool
+
+| Key    | Action |
+| -------- | ------- |
+| A/Enter  | Add new segmentation annotation    |
+| Del | Delete selected segmentation     |
+| O    | Show/Hide overlays
+
+### Tracking Tool
+
+| Key    | Action |
+| -------- | ------- |
+| D  | Hold the d key to select multiple children for a cell |
+| C | Activate/Deactivate edge cutting mode |
 
 ## Feature List
 
